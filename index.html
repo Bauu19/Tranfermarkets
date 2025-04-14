@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfermarkt - Página de jugadores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Transfermarkt</h1>
+            <input type="text" id="searchInput" placeholder="Buscar jugador..." onkeyup="searchPlayer()">
+        </div>
+    </header>
+
+    <section class="player-list">
+        <div id="player-list" class="player-list-container">
+            <!-- Jugadores serán mostrados aquí -->
+        </div>
+    </section>
+
+    <section class="player-details" id="player-details">
+        <!-- Detalles de jugador seleccionado -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
