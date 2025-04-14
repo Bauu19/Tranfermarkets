@@ -1,102 +1,129 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo global */
+/* Estilos globales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f1f1f1;
     margin: 0;
     padding: 0;
+    background-color: #f4f7fb; /* Color de fondo más suave */
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Header */
+/* Encabezado */
 header {
-    background-color: #23282d;
-    padding: 15px 0;
-    color: #fff;
+    background-color: #2c3e50; /* Color de fondo más oscuro */
+    color: white;
+    padding: 40px 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
 }
 
-header input {
+header p {
+    font-size: 20px;
     margin-top: 10px;
-    padding: 10px;
-    width: 50%;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    font-weight: 300;
 }
 
-/* Listado de jugadores */
+/* Sección de jugadores */
+.players {
+    padding: 30px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.players h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Lista de jugadores */
 .player-list {
-    padding: 20px;
-}
-
-.player-list-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
+/* Tarjeta de jugador */
 .player-card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border: 1px solid #e2e6ea;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .player-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .player-card img {
-    width: 100%;
+    width: 80%; /* Ajusta el tamaño de la imagen para que no sea tan grande */
     height: auto;
-    border-radius: 10px;
+    border-radius: 12px;
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centra la imagen */
 }
 
 .player-card h3 {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.player-card p {
-    font-size: 14px;
-    color: #555;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
 }
 
 /* Detalles del jugador */
 .player-details {
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: none;
-}
-
-.player-details img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    transition: opacity 0.3s ease;
 }
 
 .player-details h2 {
-    margin-top: 20px;
-    font-size: 24px;
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #2c3e50;
 }
 
 .player-details p {
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.player-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.player-details ul li {
+    font-size: 18px;
+    color: #555;
     margin: 10px 0;
 }
 
+.player-details ul li span {
+    font-weight: bold;
+    color: #333;
+}
+.player-details img {
+    max-width: 500px;
+    max-height: 500px;
+}
